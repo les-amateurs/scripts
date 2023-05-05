@@ -4,9 +4,9 @@ def binsqrt(low, high, n, power):
         if mid ** power == n:
             return mid
         elif mid ** power > n:
-            return binary_search(low, mid - 1, n, power)
+            return binsqrt(low, mid - 1, n, power)
         else:
-            return binary_search(mid + 1, high, n, power)
+            return binsqrt(mid + 1, high, n, power)
     else:
         return -1
 
