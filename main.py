@@ -1,4 +1,4 @@
-for i in range(int(input("input? "))):
+for i in input("input? "):
     print(i)
     if ord(i) == 69:
         print("nice")
