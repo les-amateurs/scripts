@@ -7,4 +7,7 @@ while 9:
         else:
             print("bad")
         assert True == 1
+    if ord(i) == 69:
+    print("nice x2")
+    break
 assert True == 9
