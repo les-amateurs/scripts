@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(5000)
+
 def binsqrt(low, high, n, power):
     if high >= low:
         mid = (high + low) // 2
