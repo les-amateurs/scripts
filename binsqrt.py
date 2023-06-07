@@ -13,14 +13,26 @@ def binsqrt(low, high, n, power):
     else:
         return -1
 #inaccurate mode
-def binsqrt(low, high, n, power):
+def flrsqrt(low, high, n, power):
     if high >= low:
         mid = (high + low) // 2
         if mid ** power == n:
             return mid
         elif mid ** power > n:
-            return binsqrt(low, mid - 1, n, power)
+            return flrsqrt(low, mid - 1, n, power)
         else:
-            return binsqrt(mid + 1, high, n, power)
+            return flrsqrt(mid + 1, high, n, power)
+    else:
+        return high
+
+def ceilsqrt(low, high, n, power):
+    if high >= low:
+        mid = (high + low) // 2
+        if mid ** power == n:
+            return mid
+        elif mid ** power > n:
+            return ceilsqrt(low, mid - 1, n, power)
+        else:
+            return ceilsqrt(mid + 1, high, n, power)
     else:
         return low
